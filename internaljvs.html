@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>internal Java script</title>
+<h1>internal Java script</h1>
+<script type=text/javascript src="jstutorial.js">
+/*
+var temp="I am here";
+//just like message box in vb
+alert(temp);
+//To print on the web browser
+document.write("<div style=\"color:red;\">"+temp+"</div>");
+//array decleration 
+var arr=new  Array("India","Bangladesh");
+document.write(arr.length+"<br />"+arr);
+//conditional
+if(temp.length>3)
+{
+document.write("<br>I am in if statement="+temp.length);
+}
+else if(arr.length>1)
+{
+document.write("<br>I am in elseif statement");
+}
+else
+{
+document.write("<br>I am in else statement");
+}
+//switch case
+var age=19
+switch(age){
+case 15:
+		alert("you are trenager");
+		break;
+case 19:
+		alert("you are adult");		
+		break;
+case 25:
+		alert("you are young");	
+		break;
+default:
+		alart("you are ardy to die");			
+	
+	}	
+	//for loop
+	for(i=0;i<9;i++)
+	{
+	document.write(i+"<br>");
+	}
+	//while loop
+	while(i<19){document.write(i+"<br>");
+	i++;}
+	*/
+	//function
+	
+	
+	
+
+
+
+
+
+/*
+function validate()
+{
+var uname="koushik";
+var pass="123456";
+var username=document.getElementById("uname").value;
+var password=document.getElementById("pass").value;
+if(username.length<6){
+errors['username']="must be greater Than 6";
+}
+else if(username.length>15)
+errors['username']="must be less than 15";
+}
+else if(password.length<6)
+errors['password']="must be less than 6";
+}
+else if(password.length>15)
+errors['password']="must be less than 15";
+}
+else
+{
+  if(username==uname && password==pass)
+  {
+	alert("Login sucessful");
+	if(errors.length>0){
+            return false;
+         }else{
+      document.forms[0].submit();
+               }
+  }else{
+	alert("You Have Given Wrong Username and Password");
+	   }
+}
+		
+
+}
+function settext(id1){
+document.getElementById(id1).innerHTML="u have given wrong";
+}
+*/
+</script>
+
+</head>
+<body>
+<fieldset width="100px">
+<legend>Login Area</legend>
+<form action="http://google.com" method="POST" name="mylogin" id="mylogin">
+Username:<input type="text" name="uname" id="uname" value="koushik"><span id="s"></span><br>
+Password:<input type="password" name="pass" id="pass" value="123456"><span id="f"></span>
+<input type="button" value="login" name="login" onclick="validate();">
+</form
+</fieldset>
+
+</body>
+</html>

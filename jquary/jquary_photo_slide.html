@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>This is a shoto slide show</title>
+		<script type=text/javascript src='../jquery-1.7.1.min.js' ></script>
+		<script>
+			$('document').ready(function(){
+		
+				$('img').click(function(){
+					var currentId = $(this).attr('id');// it will get the id of the selected tag
+					$('#'+currentId).fadeOut('slow',function(){//it will fade out the selected id
+					var html=($('img').get(0));				// it will get the heml tag
+					//$(this).hide(2000);
+					var currentI = $('img:last').attr('id');			
+					$(html).insertAfter($('#'+currentI));// insert after theselected tag
+					$('#'+currentId).fadeIn('slow');//it will fade in the selected tag
+					});
+					
+					
+				
+				});
+			});
+			</script>
+			<style>
+		li{
+			display:inline;
+		}
+		</style>
+		</head>
+		<body>
+	
+				<div id="icontainer" style="position:relative; display:inline; " width="10">
+				<img style="width:auto ; border:2px solid red;"   id="img0" src="/xampp/htdocs/test/upload/5.gif">
+				<img style="width:auto ; border:2px solid red;" id="img1" src="/xampp/htdocs/test/upload/GRCal06_01.gif">
+				<img style="width:auto ; border:2px solid red;"id="img2"  src="/xampp/htdocs/test/upload/MobileHeart.com-Cool-3884-4861.gif">
+				</div>
+				
+		</body>
+</html>

@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title>This is a internal jquary</title>
+		<script type=text/javascript src='../jquery-1.7.1.min.js' ></script>
+		<script>
+			$('document').ready(function(){
+			//// for upload
+		/*$('#upload').keypress(function(){
+				var len=$('#upload').val()
+				
+				if(len.length<6){
+				$('#upload').css({
+				'color':'red'})
+				
+				}
+				else
+				$('#upload').css({
+				'color':'green'})
+				
+				
+			});
+			*/
+				
+			globalVar =1;
+			
+				
+			$(this).click(function(){		
+				//var tt=$(this).after($('<input>' ))
+				//var tt=$('#1').val();
+				
+				//alert(tt.text);
+				if(globalVar != 5){	
+				icount=globalVar ;
+				icount=icount+1;	
+				 
+			$("<br /><input type='file' name='upload[]' id='ul[]'>").insertAfter('#'+globalVar );	
+				//$('#me').after("<form enctype='multipart/form-data' id='upload_form'><input type='file' name='upload' id='upload'><br />	<input type='button' name='submit'  value='submit' id='submit'></form>");	
+				globalVar =globalVar +1;
+					}
+					
+					});
+				
+					
+			
+			
+			//hide the register form and  login form
+			$('.register').hide();
+			$('#lregister').click(function(){
+				$('.login').hide(5000);
+				$('.register').show();
+			});
+			$('#llogin').click(function(){
+				 var position=$('.login').position();
+				 var widths=$('.login').width();
+				var height = $(window).height();
+				 alert(widths+''+height);
+				 alert (position.top+' '+position.left+' '+widths);
+				//$('.login').show(5000);
+				//$('.register').hide(5000);
+				$('.login').fadeIn(5000);
+				$('.register').fadeOut(5000);
+				//$('.login').slideToggle("fast");
+				//$('.register').slideToggle("fast");
+			})
+			
+			
+			
+			
+			
+			
+			
+					
+			$(window).load(function(){
+				alert('window has been loaded')});
+			
+				
+				
+			
+		</script>
+		<style>
+		li{
+			display:inline;
+		}
+		</style>
+	</head>
+	<body>
+	
+		<div id='relog'>
+		<div id='uili'>
+		<ol style="list-style:none;"> 
+			<li ><a id='lregister' href='###'>Register</a> </li>
+			<li ><a id='llogin' href='###'>Login</a></li>
+		</ol>
+		</div>
+		<form class='register'>
+			first name<input type= "text" name="fname" id='fname'><br/>
+			last name<input type= "text" name="lname" id='lname'><br/>
+			user name<input type= "text" name="uname" id='uname'><br/>
+			email<input type= "text" name="email" id='email'><br/>
+			password<input type= "password" name="password" id='password'><br/>
+			<input type= "button" name="register" id='submit' value="submit"><br/>
+		</form>
+		<form class='login'>
+			user name<input type= "text" name="uname" id='uname'><br/>
+			password<input type= "password" name="password" id='password'><br/>
+			<input type= "button" name="register" id='submit' value="submit"><br/>
+		</form>
+		</div>
+		
+		<div id='me'>
+		<form enctype='multipart/form-data' id='upload_form'>
+		<input type='file' name='upload' id='1'><br />
+		<input type='button' name='submit'  value='submit' id='submit'>
+		</form>
+		</div>
+	
+	</body>
+</html>
